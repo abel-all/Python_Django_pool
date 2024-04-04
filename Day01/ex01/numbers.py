@@ -1,6 +1,7 @@
 def read_nbrs_and_print_it():
     file = open("numbers.txt", "r")
     list = file.readline().split(',')
+    file.close()
     list_size = len(list)
     list[list_size - 1] = list[list_size - 1].strip()
     for i in list:
