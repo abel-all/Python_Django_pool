@@ -24,10 +24,14 @@ def serch_for_city(arg):
             return key
     return 'none'
 
-args_size = len(sys.argv[1:])
-if args_size != 1:
-    quit()
-s = serch_for_city(sys.argv[1])
-if s != 'none':
-    serch_by_value(s)
-print ('Uknown arg')
+def parse_and_execute():
+    args_size = len(sys.argv[1:])
+    if args_size != 1:
+        quit()
+    s = serch_for_city(sys.argv[1])
+    if s != 'none':
+        serch_by_value(s)
+    print ('Uknown arg')
+
+if __name__ == '__main__':
+    parse_and_execute()

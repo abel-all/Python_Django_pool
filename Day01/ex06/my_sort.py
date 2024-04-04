@@ -29,7 +29,7 @@ def sort_by_year():
             if d[i] == y:
                 sorted_dict[i] = y
 
-    for key, value in sorted_dict.items():
+    for key in sorted_dict.keys():
         print (key)
 
 def sort_by_alph_order():
@@ -60,8 +60,8 @@ def sort_by_alph_order():
     for key in sorted_keys_list:
         print (key)
 
-
-sort_by_year()
-print('-----------------------')
-sort_by_alph_order()
+if __name__ == '__main__':
+    sort_by_year()
+    print('-----------------------')
+    sort_by_alph_order()
 

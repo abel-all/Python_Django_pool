@@ -27,16 +27,18 @@ def search_for_key(keyword):
                         return
         print(keyword, 'is neither a capital city nor a state')
 
+def parse_and_execute():
+    args_size = len(sys.argv[1:])
+    if args_size != 1:
+        sys.exit(1)
 
-args_size = len(sys.argv[1:])
-if args_size != 1:
-    sys.exit(1)
+    list_of_arg = sys.argv[1].split(',')
 
-list_of_arg = sys.argv[1].split(',')
+    list_of_arg = [x.strip(' ').title() for x in list_of_arg]
 
-list_of_arg = [x.strip(' ').title() for x in list_of_arg]
+    for i in list_of_arg:
+        if i == '': continue
+        search_for_key(i)
 
-for i in list_of_arg:
-    if i == '': continue
-    search_for_key(i)
-
+if __name__ == "__main__":
+    parse_and_execute()
